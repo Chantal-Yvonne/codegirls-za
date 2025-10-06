@@ -1673,11 +1673,6 @@ html {
         max-width: 600px;
     }
 
-    /* .footer-info {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4rem;
-    } */
-
     .footer-links h4 {
         font-size: var(--font-20);
     }
