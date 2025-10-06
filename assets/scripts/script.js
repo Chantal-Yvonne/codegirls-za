@@ -1,4 +1,3 @@
-// ========== SIMPLE JQUERY-BASED JAVASCRIPT ==========
 
 $(document).ready(function() {
     
@@ -93,9 +92,9 @@ $(document).ready(function() {
   arrows: false,
   dots: false,
   autoplay: true,
-  autoplaySpeed: 0,          // no delay between slides
-  speed: 7000,               // how long one scroll takes (ms)
-  cssEase: 'linear',         // makes it continuous
+  autoplaySpeed: 0,          
+  speed: 7000,               
+  cssEase: 'linear',        
   pauseOnHover: false,
    variableWidth: true,
   responsive: [
@@ -159,47 +158,6 @@ $(document).ready(function() {
             return false;
         }
     });
-
-    // ========== COUNTER ANIMATION (LIKE CHARITEAM) ==========
-    // function animateCounters() {
-    //     $('.counter').each(function() {
-    //         var $this = $(this);
-    //         if (!$this.hasClass('counted')) {
-    //             var countTo = $this.attr('data-count');
-    //             $({ countNum: 0 }).animate({
-    //                 countNum: countTo
-    //             }, {
-    //                 duration: 2000,
-    //                 easing: 'swing',
-    //                 step: function() {
-    //                     $this.text(Math.floor(this.countNum));
-    //                 },
-    //                 complete: function() {
-    //                     $this.text(this.countNum);
-    //                     $this.addClass('counted');
-    //                 }
-    //             });
-    //         }
-    //     });
-    // }
-
-    // Trigger counter animation on scroll
-    // $(window).scroll(function() {
-    //     var counterTop = $('.counter').length ? $('.counter').first().offset().top : 0;
-    //     var viewportBottom = $(window).scrollTop() + $(window).height();
-        
-    //     if (counterTop < viewportBottom - 100) {
-    //         animateCounters();
-    //     }
-    // });
-
-    // ========== PARALLAX EFFECT (SIMPLE) ==========
-    // $(window).scroll(function() {
-    //     var scrolled = $(window).scrollTop();
-    //     $('.hero-section').css('background-position', 'center ' + (scrolled * 0.5) + 'px');
-    // });
-
- 
 
 });
 
