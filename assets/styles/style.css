@@ -1462,14 +1462,6 @@ html {
     color: var(--cg-gray-text);
 }
 
-.team-head p{
-    color:var(--cg-blue);
-}
-.our-team {
-    display: flex;
-    justify-content: center;
-}
-
 
 /* ========================================================================
                          RESPONSIVE - TABLET
@@ -1558,6 +1550,8 @@ html {
         gap: 20px;
     }
 
+    
+
 }
 
 /* ========================================================================
@@ -1612,6 +1606,7 @@ html {
     }
 
     .about-cg-box {
+        /* grid-template-columns: repeat(4, 1fr); */
         gap: 2rem;
     }
 
@@ -1649,6 +1644,12 @@ html {
         font-size: var(--font-18);
     }
 
+    .our-team {
+        /* background-color: var(--bg-light);
+        padding: 4rem 1.25rem; */
+        display: flex;
+        justify-content: center;
+    }
     .cta-section {
         padding: 4rem;
     }
@@ -1672,6 +1673,10 @@ html {
         max-width: 600px;
     }
 
+    /* .footer-info {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    } */
 
     .footer-links h4 {
         font-size: var(--font-20);
@@ -1706,6 +1711,10 @@ html {
         padding: 3rem;
     }
 
+    /* .leader-img {
+        display: flex;
+    } */
+
     .leader-images {
         padding: 2rem 3rem;
     }
@@ -1717,6 +1726,7 @@ html {
 }
 
 /* ========== BACK TO TOP BUTTON ========== */
+/* BACK TO TOP BUTTON */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -1753,6 +1763,27 @@ html {
   transform: scale(1.1);
 }
 
+
+
+/* ========== LOADING ANIMATION ========== */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
 /* ========== HOVER EFFECTS ========== */
 .about-cg-boxes::after {
@@ -1819,4 +1850,3 @@ html {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
