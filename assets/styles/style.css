@@ -350,6 +350,10 @@ html {
     color: var(--cg-green);
 }
 
+#ct-yellow {
+    color:var(--cg-yellow);
+    margin-bottom: 0;
+}
 .hero-section {
     background-image: url("../images/Cohort3/thelma.jpg");
     background-size: cover;
@@ -374,7 +378,7 @@ html {
 .hero-heading {
     position: relative;
     z-index: 1;
-    padding: 2rem 1.25rem;
+    padding: 1rem 1.25rem 2rem;
     max-width: 90rem;
     margin: 0 auto;
     width: 100%;
@@ -1219,6 +1223,7 @@ html {
     color: var(--cg-gray-text);
     line-height: 1.7;
     max-width: 500px;
+    margin-bottom:1rem;
 }
 
 .footer-info {
@@ -1486,10 +1491,12 @@ html {
 .team-head p{
     color:var(--cg-blue);
 }
-/* .our-team {
-    background-color: var(--bg-light);
-    padding: 4rem 1.25rem;
-} */
+.our-team {
+    /* background-color: var(--bg-light);
+    padding: 4rem 1.25rem; */
+    display: flex;
+    justify-content: center;
+}
 
 .team-images {
     display: grid;
@@ -1827,53 +1834,44 @@ html {
 }
 
 /* ========== BACK TO TOP BUTTON ========== */
+/* BACK TO TOP BUTTON */
 .back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--cg-green);
-    color: var(--cg-white);
-    border-radius: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-20);
-    box-shadow: var(--shadow-lg);
-    z-index: 999;
-    transition: all var(--transition-base);
-    text-decoration: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--cg-green);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .back-to-top:hover {
-    background-color: #0f8f5a;
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+  background-color: #0f8f5a;
+  transform: scale(1.1);
 }
 
-.back-to-top i {
-    animation: bounce 2s infinite;
-}
 
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-10px);
-    }
-
-    60% {
-        transform: translateY(-5px);
-    }
-}
 
 /* ========== LOADING ANIMATION ========== */
 .loading-overlay {

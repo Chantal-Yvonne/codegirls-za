@@ -199,18 +199,23 @@ $(document).ready(function() {
     //     $('.hero-section').css('background-position', 'center ' + (scrolled * 0.5) + 'px');
     // });
 
-    // ========== BACK TO TOP BUTTON ==========
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn();
-        } else {
-            $('.back-to-top').fadeOut();
-        }
-    });
-
-    $('.back-to-top').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 800);
-        return false;
-    });
+ 
 
 });
+
+    // ========== BACK TO TOP BUTTON ==========
+
+  const backToTopButton = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  });
+
+  backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
